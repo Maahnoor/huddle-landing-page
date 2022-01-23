@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+:root{
+	--Violet: hsl(257, 40%, 49%);
+	--SoftMagenta: hsl(300, 69%, 71%);
+
+	--fw-regular: 400;
+	--fw-bold: 600;
+
+
+}
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+body{
+	background: url(images/bg-mobile.svg),  linear-gradient(to right, var(--SoftMagenta),0%, var(--Violet));
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 20px;	
+	min-height: 100vh;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	margin: 1.5em;
+}
+
+#flex-container-1{
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	margin-bottom: 3em;
+}
+
+#logo{
+	width: 45%;
+	align-self: start;
+	margin-bottom: 2em;
+}
+
+#mockup{
+	width: 95%;
+}
+
+#flex-container-2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+
+}
+
+#flex-container-2 h1{
+	font-size: 1.2em;
+	font-weight: var(--fw-bold);
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#flex-container-2 p{
+	font-size: 0.82em;
+	line-height: 1.7em;
+	text-align: center;
+	font-weight: var(--fw-regular);
+	margin-bottom: 2em;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+#flex-container-2 button{
+	width: 65%;
+	border-radius: 2em;
+	height: 4em;
+	color: var(--Violet);
+	border: none;
+	background-color: white;
+	font-size: 0.5em;
+	margin-bottom: 5em;
+
+}
+
+#flex-container-2 button:hover{
+	cursor: pointer;
+	background-color: var(--SoftMagenta);
+	color: white;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid white;
+    box-sizing: content-box;
+	color: white;
+
+}
+
+.fa:hover{
+	border-color: var(--SoftMagenta);
+		cursor: pointer;
+	color: var(--SoftMagenta);
+}
+
+@media (min-width: 640px){
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: url(images/bg-desktop.svg),linear-gradient(to right, var(--SoftMagenta),0%, var(--Violet));
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	main{
+		flex-direction: row;
+		margin-left: 4.5em;
+		margin-right: 4.5em;
+		height: 100%;
+	}
+	#flex-container-1{
+		margin: 0;
+	}
+	#logo{
+		width: 30%;
+	}
+
+	#flex-container-2{
+		flex-basis: 43%;
+		justify-content: flex-end;
+		align-items: flex-start;
+		margin: 0;
+		margin-left: 2em;
+	}
+	#flex-container-2 h1{
+		font-size: 1.8em;
+		text-align: left;
+	}
+	#flex-container-2 p{
+		text-align: left;
+	}
+	#flex-container-2 button{
+		width: 35%;
+		font-size: 0.7em;
+	}
+	#socials{
+		align-self: end;
+	}
+}
